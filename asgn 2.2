@@ -1,0 +1,32 @@
+HDFS:
+Hdfs(Hadoop distributed file system)is a master-slave architecure based system which is used to suppot big data applications.
+comparatively it is a low cost system.
+In hadoop system every macchine has a data node and a task tracker.
+
+Data node contains all the information required to perform operations by task tracker.
+master-slave architecure has a name node and a data node .
+name node: it manages the client's access to the files.
+data node: it regulates the storage of the data.
+hdfs support the block storage system in which data is stored in form of blocks,that is a hudge amount of data is divided 
+into small blocks of data and stored.
+for example if we decide the block size as 100MB and we have to sore 500MB then it will form 5 blocks each having a size equal to 100MB.
+
+HADOOP CLUSTER:
+Unlike rdbms in which data is stored in aspecific format,Hadoop cluster  is designed to store and analyze  hudge amount of unstructured data in a distributed computing environment.hadoop provides a risk free enviroment fro m system faliure since each
+each piece of data is copied in multile nodes so that even if a system fails other options are always avaliable.
+hadoop cluster has three compnents 
+1 master 2 slave 3 client
+1. master  sore meta daa it consists of name node,seconday node,job tracker
+2. slave is responsible for storage of data and data computation it contains data node and task tracker.
+3.clent clent loads the data into server.
+
+
+HDFS BLOCKS:
+hdfs stores the data in form of blocks taat is it divide a hudge data in he form of smnall blocks.
+the default block size is 128MB.
+because of the small size it is easy o calaulate the number f block required for a particular file and also i copies a block multiple times .
+so in case f node failure  he same block can be rea from some other node.
+eg:
+data size      block size    no of blocks
+640 MB         128MB         5 
+1280MB         128MB         10
